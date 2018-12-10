@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LLPro无限节流-新手帮助教程-免费手机流量上网APP神器软件、吾爱4Gml免流狗、LLProxy官网论坛平台</title>
+        <meta name="keywords" content="全国广东特价低价包月、免费手机流量上网APP神器软件、吾爱4Gml免流狗、LLProxy官网论坛平台">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="icon" href="img/favicon.ico">
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/zui-theme.min.css" type="text/css" />
+    </head>
+    <body id="body">
+        <!--[if lt IE 7]>
+                <p class="browsehappy">您的浏览器不支持此网页，请升级为IE8及以上版本，或者使用谷歌浏览器、火狐浏览器、360浏览器。</p>
+        <![endif]-->
+
+             <section id="portfolio" class="portfolio-area">
+                <div class="container">
+                <div class="section-header">
+                  <h2 class="section-title text-center wow fadeInDown">LLPro方案编写指导</h2>
+                  </br>
+                  <div class="alert alert-danger" role="alert">
+                    <b>方案例子：</b>
+                    </br></br>
+                    #HTTP模块
+                    </br>
+                    http_del="host,x-online-host";
+                    </br>
+                    http_first="[M] [U] [V]\r\nHost: [H]\r\n\tX-Online-Host: [H1]\r\n";
+                    </br></br>
+                    #HTTPS模块
+                    </br>
+                    https_del="host,x-online-host";
+                    </br>
+                    https_first="CONNECT [H] HTTP/1.0\r\nHost: [/H2]\rX-Online-Host: [/H1:]\r\n";
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    <b>抓包结果：</b>
+                    </br></br>
+                    HTTP模块：
+                    </br>
+                    GET /index.htm HTTP/1.1
+                    </br>
+                    Host: www.52llp.com
+                    </br>
+                    X-Online-Host: rd.go.10086.cn
+                    </br></br>
+                    HTTPS模块：
+                    </br>
+                    CONNECT www.52llp.com HTTP/1.0
+                    </br>
+                    Host: http://wap.10086.cn
+                    </br>
+                    X-Online-Host: http://rd.go.10086.cn:443
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                    <b>语法说明：</b>
+                    </br></br>
+Host: 代表Host行的请求头。
+</br></br>
+X-Online-Host: 代表X-Online-Host行的请求头。
+</br></br>
+[M] 代表HTTP请求方法。自动识别GET/POST/CONNECT 如同：[method]
+</br></br>
+[U] 代表[uri] 如同：/index.htm
+</br></br>
+[V] 代表自动识别请求协议版本。 如同：HTTP/1.1  HTTP/1.0
+</br></br>
+[H]代表真实Host。如同：[host] 例如：www.52llp.com
+</br></br>
+[H1]代表自己设置的节流Host。例如：rd.go.10086.cn
+</br></br>
+[H2]代表自己设置的第二节流Host。例如：wap.10086.cn
+</br></br>
+[/H1]代表http://节流Host。例如：http://rd.go.10086.cn
+</br></br>
+[/H2]代表http://第二节流Host。例如：http://wap.10086.cn
+</br></br>
+[/H1:]代表http://节流Host:443。例如：http://rd.go.10086.cn:443
+</br></br>
+[/H2:]代表http://第二节流Host:443。例如：http://wap.10086.cn:443
+</br></br>
+CONNECT 代表HTTPS请求协议。
+</br></br>
+http_del 代表删除Http请求内容里指定的请求行。
+</br></br>
+http_first 代表修改Http请求内容。
+</br></br>
+https_del 代表删除Https请求内容里指定的请求行。
+</br></br>
+https_first 代表修改Https请求内容。
+</br></br>
+\t 代表 制表 如同：【 】。注：【】里面的字符
+</br></br>
+\r 代表回车 如同：【
+】。注：【】里面的字符
+</br></br>
+\n 代表换行符
+</br></br>
+\r\n 代表 回车符 + 换行符 就是换行
+                  </div>
+                 </div>
+               </section>
+
+               <section id="portfolio" class="portfolio-area">
+                <div class="container">
+                <div class="section-header">
+                  <h2 class="section-title text-center wow fadeInDown">方案编写宝典</h2>
+                  <div class="alert alert-info" role="alert">
+                    <b>学习方案编写前：</b>
+                    </br></br>
+必须搞懂节流方案的作用。编写方案就是通过修改正常访问请求，达到节流的目的。
+</br></br>
+如果想要节流，就必须对请求进行伪装，让运营商认为我们访问的是不收流量的网站，而不是正常计费的网站。
+</br></br>
+大家访问掌上营业厅时，应该都知道，是不收流量的。
+</br></br>
+我们编写方案，就是利用这个原理进行伪装。将正常的Host伪装成节流Host。
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                    <b>第一课：节流的原理</b>
+                    </br></br>
+这个很重要，知道以后你就知道我们加节流标记不是乱加的，不会认为加的越多越有用。因为你加的东西只需要起到两个作用。
+</br></br>
+第一个作用：就是不被代理服务器读取到，这个10.0.0.172读取我们真实请求的方式只有运营商自己知道，这也是和谐方案的方法。
+</br></br>
+但是10.0.0.172这个代理服务器获取域名网址的类型是固定的，有固定的搭配，这个搭配是HTTP文本协议所固定的，这个HTTP文本协议出现在运营商建立10.0.0.172这个代理服务器之前，所以这个固定的域名请求是固定的不可改变的。
+</br></br>
+下一课我们首先学习10.0.0.172读取固定搭配域名的关系。
+</br></br>
+（10.0.0.172和10.0.0.200这其实就是两个代理服务器，由他们读取我们的网址域名，然后由10.0.0.172去解析成物理ip地址，因为每一个虚拟主机都是很麻烦很复杂的，记忆很难，所以我们就缩短成一个一个的域名网址，只需要10.0.0.172去找这个域名所代表的虚拟主机。）
+</br></br>
+上面我们说了我们修改方案加入节流标记的第一个作用之后。
+</br></br>
+那么第二个作用：就很简单了，那就是被计费系统读取到，（怎么被计费系统读取，认为是正常的节流量行为我们下面会学习的，因为这是节流12年来最权威的一本学习资料。）
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    <b>第二课：代理服务器10.0.0.172如何读取主机域名</b>
+                    </br></br>
+HTTP文本协议（文件传输协议使得主机间可以共享文件。FTP使用TCP生成一个虚拟连接用于控制信息，然后再生成一个单独的 TCP 连接用于数据传输。
+</br></br>
+控制连接使用类似TELNET协议在主机间交换命令和消息。
+</br></br>
+文件传输协议是TCP/IP网络上两台计算机传送文件的协议，FTP是在TCP/IP网络和INTERNET上最早使用的协议之一，它属于网络协议组的应用层。
+</br></br>
+FTP客户机可以给服务器发出命令来下载文件，上传文件，创建或改变服务器上的目录。）
+</br></br>
+这些只是作为一个了解，因为这是工程师需要了解的，而你只是个偷流量的小偷，好了开个玩笑。下面请注意
+</br></br>
+看了上面的这个，你可能有点映像了，就是我们生成的这个虚拟连接就是我们需要修改处理的东西，它的例子如下（为了直观本文所有空格都会用文字阐述）
+</br></br>
+a:
+</br></br>
+GET空格http://wap.baidu.com/u/m空格HTTP/1.0
+</br>
+Host:空格wap.baidu.com
+</br></br>
+在这里我们的10.0.0.172自动读取主机域名是http://后面到空格HTTP/1.0之间的域名为真实域名加以解析，有人就说了，你怎么知道，因为我们把Host:空格wap.baidu.com全部去掉也是可以联网的。那位有问了那这个Host:空格wap.baidu.com是不是没有用，在这个固定搭配里基本没有用，但是它又必须存在，因为这个不管10.0.0.172代理服务器读不读取，都是HTTP文本协议所必须生成的。这也是方案里的透明代理方案，也是代理服务器10.0.0.172的第一种取值方式
+</br></br>
+b:
+</br></br>
+这里开始说10.0.0.172的第二种取值所需要的固定搭配。实例如下。
+</br></br>
+GET空格/t/html/z空格HTTP/1.0
+</br>
+Host:空格wap.baidu.com
+</br></br>
+这里没有http://wap.baidu.com了又如何被10.0.0.172取到值呢？其实这也是个固定的HTTP文本传输协议搭配，在这个搭配中我们的10.0.0.172没有读取到http://所以就主动放弃了去寻找http://后面的主机域名，而把GET后面的所有参数当成绝对URI了，（URI是虚拟主机中的文件夹目录，定义我们的读取网络文件的路径。）。然后自动读取文本传输协议的必须格式的Host的值为主机域名去解析物理ip地址。这第二种搭配也是文本协议的一种常态形式，我们说过文本传输协议早出于运营商的网络建设，所以10.0.0.172逃不出这些搭配。
+</br></br>
+c:
+</br></br>
+上面说了两种固定取值的原理，下面讲第三种，实例如下。
+</br></br>
+GET空格http://wap.10010.com空格HTTP/1.1
+</br>
+Host:空格wap.10010.com
+</br>
+X-Online-Host:空格wap.baidu.com
+</br></br>
+这个文本传输协议一看很简单，其实没有几个人说得清，现在我们就来好好说说这个固定搭配，看了本文前两个固定搭配是不是被这个搭配搞得有点迷茫呢，其实就一句话，如果方案里有X-Online-Host出现且格式正常有效的话就彻底推翻我们上面的两个搭配，这三个搭配没有谁好之分，记住我们的初衷是学习10.0.0.172的取值问题，只要能加入我们的节流标记又不妨碍10.0.0.172取到值，就是有用的搭配。那么这个X-Online-Host是个什么鬼，这么吊，这个X-Online-Host的书面意思是移动私有代理协议，这里的移动并不是移动公司，而是移动设备互联网。三家运营商都可以使用这个代理。因为文本传输协议中在设计之初，就有这个X-Online-Host，从手机还不能上网的时候就有了，这是移动互联网接入因特网的固定协议，所以权限大于10.0.0.172这个代理服务所解析的数据，因为英特网可以直接解析X-Online-Host的值，我们的10.0.0.172读取到X-Online-Host的值的时候就直接把这个HTTP文本传输协议甩给英特网去处理，所以这个固定搭配的原理就超出了我们上面说到的几种固定搭配的范围了。
+</br></br>
+d:
+</br></br>
+上面说了三种固定搭配了，这三种都会经过运营商的10.0.0.172这个代理服务器，下面说一个自己更换运营商代理服务器的搭配，也就是传说中的圣子方案，它的实例如下。
+</br></br>
+GET空格http://wap.10010.com/u/m空格HTTP/1.1
+</br>
+Host：wap.baidu.com
+</br></br>
+这个搭配和我们的第一个固定搭配透明方案很像，到是仔细看又有点不一样，到底10.0.0.172会取哪一个值去解析呢，如果取http://后面的wap.10010.com的话，那我们打开的网页就是手机营业厅了，岂不是没有节流效果，其实在这里我们已经在我们的节流平台，比如samp中已经设置了代理服务器ip，不在使用运营商提供的10.0.0.172了，也就是圣子ip，这个圣子ip基本和10.0.0.172一样的原理，到是它只识别这一个固定搭配，意思是只会读取本搭配中的Host的值，而且还不能伪装这个Host，不能任何伪装，且只有一个有效的Host，还必须是真实Host。这个搭配永远不变，只会变圣子ip。
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                    <b>小结</b>
+                    </br></br>
+上面说了节流的基本搭配，也是方案的框架，下面我们就进阶学习如何添加伪装。
+</br></br>
+（上面的内容理解完毕再往下看，不然走火入魔，轻者自宫，重者大小便失禁。）
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    <b>伪装方案的节流标记第一讲:后缀大法</b>
+                    </br></br>
+实例如下：
+</br></br>
+GET空格http://wap.baidu.com/u/m?wap.10010.com空格HTTP/1.0
+</br>
+Host:空格wap.10010.com
+</br></br>
+这个后缀方案至于如何被10.0.0.172读取到虚拟主机的值，请看上面的a小节。这个后缀方案有两点需要注意的，因为我们改变了URI的数据，在网络主机存取数据的时候会失去原来本来的路径，可能会产生浏览bug（URI上文有介绍，这里不多阐述。）第二，有部分地区会被10.0.0.172双重读取主机的值，比如说读取到http://后面的值和Host的值不一样的时候，禁止解析，所以不能联网，在a小节说的Host是多余的，到是这里的Host:wap.10010.com是给计费系统准备的，所以有用，那我们如何避免被双重读取呢，很简单，加入Host:后面不加入别的字母。就变成如下形式
+</br></br>
+GET空格http://wap.baidu.com/u/m?wap.10010.com空格HTTP/1.0
+</br>
+Host:
+</br>
+Host:空格wap.10010.com
+</br></br>
+需要特别说明的是方案灵活多样，加入的东西也前变万化。需要你自己体会。
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                    <b>伪装方案的节流标记第二讲:无缀大法</b>
+                    </br></br>
+                    实例如下：
+                    </br></br>
+GET空格/t/html/z空格HTTP/1.0
+</br>
+空格Host空格:空格wap.baidu.com
+</br>
+Host:空格wap.10010.com
+</br></br>
+注意这个方案的：
+</br></br>
+空格Host空格:空格wap.baidu.com这一行。这个方案如何能联网请看上面方案取值的b小节。
+</br></br>
+我们的10.0.0.172能够读取到（空格Host空格:空格wap.baidu.com）这一行的值，到是计费系统读取不到，这充分证明了10.0.0.172代理服务器和计费系统分开的原理。而下面的那个Host就是给计费系统准备的。到是得注意的是被10.0.0.172读取数值的Host要在被计费系统读取的Host之前。这个方案还有几个变异。比如下例
+</br></br>
+GET空格/t/html/z空格HTTP/1.0
+</br>
+G\rHost空格:空格wap.baidu.com
+</br>
+Host:空格wap.10010.com
+</br></br>
+GET空格/t/html/z空格HTTP/1.0
+</br>
+G\rX-Online-Host空格:空格wap.baidu.com
+</br>
+Host:空格wap.10010.com
+</br></br>
+这两个变异的原理和无缀原理一样，G\r这里起到和空格同样的作用，过10.0.0.172而不过计费系统。因为这两者的读取规则不一样，这才有我们的节流。\r这是回车不换行的意思。因为没有换行也被计费系统默认为是上一行的未完表达，到是10.0.0.172读取到回车就默认换行了，这是不是很神奇，我也一直纳闷为什么计费系统的读取规则和10.0.0.172不一样呢？这里的X-Online-Host可以用上面的方案取值的C小节原理。
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    <b>伪装方案的节流标记第三讲:X-Online-Host伪装</b>
+                    </br></br>
+实例如下：
+</br></br>
+GET空格http://wap.10010.com/u/m空格HTTP/1.1
+</br>
+Host:空格wap.10010.com
+</br>
+X-Online-Host:空格wap.baidu.com
+</br></br>
+这个方案的节流标记很明显了，到是我们需要伪装什么呢？对就是需要伪装X-Online-Host不被计费系统读取到。有的地方有这个XH就不免，因为运营商的计费系统已经设置了没有经过10.0.0.172解析地址的联网请求为黑名单（这个在上面c小节里说过用这个XH是直接引导给英特网解析的，所以没有经过10.0.0.172解析域名直接被认定不免。）到是大部分地区还是可以伪装这个XH的，伪装方法加空格让计费系统读取不到这个XH的存在。实例如下
+</br></br>
+GET空格http://wap.10010.com/u/m空格HTTP/1.1
+</br>
+Host:空格wap.10010.com
+</br>
+空格X-Online-Host空格:空格wap.baidu.com
+</br></br>
+也可以这样：
+</br></br>
+GET空格http://wap.10010.com/u/m空格HTTP/1.1
+</br>
+Host:空格wap.10010.com
+</br>
+G\rX-Online-Host空格:空格wap.baidu.com
+</br></br>
+还可以这样：
+</br></br>
+GET空格http://wap.10010.com/u/m空格HTTP/1.1
+</br>
+Host:空格wap.10010.com
+</br>
+X-Online-Host:
+</br>
+X-Online-Host:空格wap.baidu.com
+</br></br>
+这里就是双重读取的规则，第一次读取的值是null，就默认没有，上面我们说过的。
+</br></br>
+到是注意只能有一个真实的XH有效值，不能有两个XH，比如下面的错误形式：
+</br></br>
+GET空格http://wap.10010.com/u/m空格HTTP/1.1
+</br>
+Host:空格wap.10010.com
+</br>
+X-Online-Host:空格wap.10010.com
+</br>
+X-Online-Host:空格wap.baidu.com
+</br>
+这样就不能联网了，因为10.0.0.172分不清楚了。
+</br></br>
+特别注意，现在有的人喜欢在X-Online-Host中间加入些东西，比如X-\rOnline-Host，这是完全错误的用法，因为这样写不但10.0.0.172不能识别，即使你写成X-\rOnline-Host:wap.10010.com也同样不被计费系统认可，请问你这么写的用处何在？这个X-Online-Host是固定的，是移动互联网和英特网规定死了的，你认为计费系统会改变它的样子吗？本来节流计费系统就不需要它。如果写成X-Online-\rHost:wap.10010.com的话，它的意思就是Host:wap.10010.com能不能被计费系统读取到都打个问号。
+</br></br>
+还有很多方案都喜欢用\t这个质变符号，其实就是个空格，只是抓包的时候显得很长，基本无用。我们的方案不需要那么长，你要知道你加的东西是否有效才是最重要的。怎么才能知道有效没有，那就是一个正常的联网申请中有的东西才能让计费系统读取到，如果不想被计费系统读取到，只需要用空格改变它的位置，而又能适应10.0.0.172的原理。
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                    <b>终结语：</b>
+                    </br></br>
+节流只需要把不让计费系统读取到的伪装起来就可以了。这是需要经验的。
+                  </div>
+                </div>
+               </section>
+    </body>
+</html>

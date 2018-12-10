@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LLPro无限节流-新手帮助教程-免费手机流量上网APP神器软件、吾爱4Gml免流狗、LLProxy官网论坛平台</title>
+        <meta name="keywords" content="全国广东特价低价包月、免费手机流量上网APP神器软件、吾爱4Gml免流狗、LLProxy官网论坛平台">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="icon" href="img/favicon.ico">
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/zui-theme.min.css" type="text/css" />
+    </head>
+    <body id="body">
+        <!--[if lt IE 7]>
+                <p class="browsehappy">您的浏览器不支持此网页，请升级为IE8及以上版本，或者使用谷歌浏览器、火狐浏览器、360浏览器。</p>
+        <![endif]-->
+
+             <section id="portfolio" class="portfolio-area">
+                <div class="container">
+                <div class="section-header">
+                  <h2 class="section-title text-center wow fadeInDown">LLPro节流配置说明</h2>
+                  </br>
+                  <div class="alert alert-danger" role="alert">
+                    <b>节流Host配置：</b>
+                    </br></br>
+                     选择或填写一个节流Host后，不会立即生效。
+                     </br></br>
+                     需要返回到方案列表，下拉同步一次方案
+                     </br></br>
+                     然后选中之前用的方案，并重新开启节流。
+                     </br></br>
+                     这样才能使新节流Host生效。
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    <b>为什么要设置节流Host：</b>
+                    </br></br>
+                    ①因为有的方案原本是可以节流的，但自动匹配的节流Host被和谐了，导致不节流。因此我们就需要切换一下节流Host
+                    </br></br>
+                    ②自己编写节流方案时，可以直接用变量进行调用。如：[H1]  [/H1]  [/H1:]  [H2]  [/H2]  [/H2:]
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                     <b>是否内置LLT防跳：</b>
+                     </br></br>
+                     不建议新手关闭LLT。如果关闭了LLT防跳，请务必搭配其它防跳使用。
+                     </br></br>
+                     如果您是技术大牛，可以直接在“防跳规则配置”里面添加你用的防跳规则。
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    <b>是否开启HTTPS节流：</b>
+                    </br></br>
+                    如果您一直没找到可节流的HTTPS模块，那么就关闭HTTPS选择吧。
+                    </br></br>
+                    QQ、YY、网游，都是走的HTTPS协议。
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                     <b>DNS是什么？</b>
+                     </br></br>
+                     就是根据域名查出IP地址。当我们要访问一个网站，首先会找到它的IP，然后再获取网站内容。这个解析过程，就叫DNS解析。
+                     </br></br>
+                     举例来说，如果你要访问域名www.52llp.com，首先要通过DNS查出它的IP地址是151.101.129.69
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    <b>为什么要优选DNS？</b>
+                    </br></br>
+                    DNS优选，就是为了更快地找到网站IP。
+                    </br></br>
+                    这个功能，在看视频时，体现得最为明显。
+                    </br></br>
+                    因为看视频，会从很多网址获取视频源，所以就会经常解析IP地址。
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                     <b>放行UDP节流：</b>
+                     </br></br>
+                     不建议选中此项，因为选中了跳点比较大。
+                     </br></br>
+                     有的网游走的是UDP协议，如果想玩UDP网游，那么就放行UDP协议吧。
+                     </br></br>
+                     UDP网游：手游穿越火线、王者荣耀 等
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    <b>开启流量后台统计：</b>
+                    </br></br>
+                    开启后，会实时统计多用流量。
+                    </br></br>
+                    部分手机开启后，会经常卡死，或者一直为0
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                     <b>防跳规则配置：</b>
+                     </br></br>
+                     新手不建议修改。此项主要是满足技术大牛的需求。
+                     </br></br>
+                     如果你懂防跳规则，可以在这里添加一些放行规则，或者禁网规则。
+                     </br></br>
+                     只能修改nat表。前缀要求是  iptables -t nat -I
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    <b>为什么配置好了，没有生效？</b>
+                    </br></br>
+                    有些配置保存后，需要重新开启节流环境，才能生效。
+                  </div>
+                </div>
+               </section>
+    </body>
+</html>
